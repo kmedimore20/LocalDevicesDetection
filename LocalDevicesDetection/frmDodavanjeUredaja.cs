@@ -31,10 +31,15 @@ namespace LocalDevicesDetection
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
-            string sql = $"INSERT into Dopusteni_uredaji (ID_uredaja, Prezime_vlasnika, Ime_vlasnika, Uloga) VALUES (789367OP, Ojbal, Petra, Zaštitar)";
+            string sql = $"INSERT INTO Dopusteni_uredaji (ID_uredaja, Prezime_vlasnika, Ime_vlasnika, Uloga) VALUES ('{txtIDuredaja.Text}', '{txtPrezime.Text}', '{txtIme.Text}', '{txtUloga.Text}')";
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
+            MessageBox.Show("Poznati uređaj je dodan!");
+            frmUpravljanjeUredajimaVoditelj frmUpravljanjeUredajimaVoditelj = new frmUpravljanjeUredajimaVoditelj();
+            Hide();
+            frmUpravljanjeUredajimaVoditelj.ShowDialog();
+            Close();
         }
     }
 }

@@ -39,6 +39,7 @@
             this.dopusteni_uredajiTableAdapter = new LocalDevicesDetection.kmedimore20_DBDataSetTableAdapters.Dopusteni_uredajiTableAdapter();
             this.btnDodajNoviUredaj = new System.Windows.Forms.Button();
             this.btnPovratak = new System.Windows.Forms.Button();
+            this.btnBrisanje = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDopusteniUredaji)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dopusteniuredajiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kmedimore20_DBDataSet)).BeginInit();
@@ -117,11 +118,22 @@
             this.btnPovratak.UseVisualStyleBackColor = true;
             this.btnPovratak.Click += new System.EventHandler(this.btnPovratak_Click);
             // 
+            // btnBrisanje
+            // 
+            this.btnBrisanje.Location = new System.Drawing.Point(422, 323);
+            this.btnBrisanje.Name = "btnBrisanje";
+            this.btnBrisanje.Size = new System.Drawing.Size(102, 29);
+            this.btnBrisanje.TabIndex = 3;
+            this.btnBrisanje.Text = "Obriši uređaj";
+            this.btnBrisanje.UseVisualStyleBackColor = true;
+            this.btnBrisanje.Click += new System.EventHandler(this.btnBrisanje_Click);
+            // 
             // frmUpravljanjeUredajimaVoditelj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 371);
+            this.ClientSize = new System.Drawing.Size(614, 418);
+            this.Controls.Add(this.btnBrisanje);
             this.Controls.Add(this.btnPovratak);
             this.Controls.Add(this.btnDodajNoviUredaj);
             this.Controls.Add(this.dgvDopusteniUredaji);
@@ -148,5 +160,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ulogaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnDodajNoviUredaj;
         private System.Windows.Forms.Button btnPovratak;
+        private System.Windows.Forms.Button btnBrisanje;
     }
 }

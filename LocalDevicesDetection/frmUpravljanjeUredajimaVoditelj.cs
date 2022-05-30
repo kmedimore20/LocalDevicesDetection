@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LocalDevicesDetection.Models;
 using LocalDevicesDetection.Repositories;
+using DBLayer;
 
 namespace LocalDevicesDetection
 {
@@ -17,6 +18,7 @@ namespace LocalDevicesDetection
         public frmUpravljanjeUredajimaVoditelj()
         {
             InitializeComponent();
+            DB.SetConfiguration("kmedimore20_DB", "kmedimore20", "?Su/?Di@");
         }
 
         private void frmUpravljanjeUredajima_Load(object sender, EventArgs e)
@@ -51,6 +53,25 @@ namespace LocalDevicesDetection
             Hide();
             frmizbornik.ShowDialog();
             Close();
+        }
+
+        private void btnBrisanje_Click(object sender, EventArgs e)
+        {
+            PoznatiUredaji odabrani = dgvDopusteniUredaji.CurrentRow.DataBoundItem as PoznatiUredaji;
+            if (odabrani != null)
+            {
+                string sql = $"DELETE FROM Dopusteni_uredaji WHERE ID_uredaja = '{odabrani.ID.ToString()}'";
+                DB.OpenConnection();
+                DB.ExecuteCommand(sql);
+                DB.CloseConnection();
+
+                MessageBox.Show("Uređaj je uspješno obrisan");
+
+                frmDodavanjeUredaja frmDodavanjeUredaja = new frmDodavanjeUredaja();
+                Hide();
+                frmDodavanjeUredaja.ShowDialog();
+                Close();
+            }
         }
     }
 }
