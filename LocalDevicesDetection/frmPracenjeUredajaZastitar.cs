@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace LocalDevicesDetection
 {
-    public partial class Form1 : Form
+    public partial class frmPracenjeUredajaZastitar : Form
     {
-        public Form1()
+        public frmPracenjeUredajaZastitar()
         {
             InitializeComponent();
+        }
+
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+            frmLogin frmlogin = new frmLogin();
+            Hide();
+            frmlogin.ShowDialog();
+            Close();
         }
     }
 }

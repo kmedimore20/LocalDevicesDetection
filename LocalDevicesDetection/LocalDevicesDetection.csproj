@@ -8,10 +8,26 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>LocalDevicesDetection</RootNamespace>
     <AssemblyName>LocalDevicesDetection</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +49,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DBLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Downloads\DBLayer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,15 +66,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmDodavanjeUredaja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmDodavanjeUredaja.Designer.cs">
+      <DependentUpon>frmDodavanjeUredaja.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\zaposlenik.cs" />
+    <Compile Include="frmIzbornik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIzbornik.Designer.cs">
+      <DependentUpon>frmIzbornik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOdabirObjekta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOdabirObjekta.Designer.cs">
+      <DependentUpon>frmOdabirObjekta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPracenjeUredajaVoditelj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPracenjeUredajaVoditelj.Designer.cs">
+      <DependentUpon>frmPracenjeUredajaVoditelj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPracenjeUredajaZastitar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPracenjeUredajaZastitar.Designer.cs">
+      <DependentUpon>frmPracenjeUredajaZastitar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpravljanjeUredajimaVoditelj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpravljanjeUredajimaVoditelj.Designer.cs">
+      <DependentUpon>frmUpravljanjeUredajimaVoditelj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kmedimore20_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kmedimore20_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PoznatiUredaji.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\PoznatiUredajirepository.cs" />
+    <EmbeddedResource Include="frmDodavanjeUredaja.resx">
+      <DependentUpon>frmDodavanjeUredaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIzbornik.resx">
+      <DependentUpon>frmIzbornik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOdabirObjekta.resx">
+      <DependentUpon>frmOdabirObjekta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPracenjeUredajaVoditelj.resx">
+      <DependentUpon>frmPracenjeUredajaVoditelj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPracenjeUredajaZastitar.resx">
+      <DependentUpon>frmPracenjeUredajaZastitar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpravljanjeUredajimaVoditelj.resx">
+      <DependentUpon>frmUpravljanjeUredajimaVoditelj.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,7 +146,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="kmedimore20_DBDataSet.xsc">
+      <DependentUpon>kmedimore20_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kmedimore20_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kmedimore20_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kmedimore20_DBDataSet.xss">
+      <DependentUpon>kmedimore20_DBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -76,6 +171,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
