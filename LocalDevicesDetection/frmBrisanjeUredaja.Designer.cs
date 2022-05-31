@@ -74,7 +74,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(411, 273);
+            this.ClientSize = new System.Drawing.Size(373, 273);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnObrisi);

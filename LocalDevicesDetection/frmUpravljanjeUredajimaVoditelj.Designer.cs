@@ -183,11 +183,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(262, 80);
+            this.label2.Location = new System.Drawing.Point(196, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.Size = new System.Drawing.Size(137, 13);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Pretraživanje:";
+            this.label2.Text = "Pretraživanje po prezimenu:";
             // 
             // frmUpravljanjeUredajimaVoditelj
             // 
