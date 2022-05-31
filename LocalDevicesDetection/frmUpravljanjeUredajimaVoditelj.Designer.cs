@@ -65,7 +65,7 @@
             this.dgvDopusteniUredaji.Location = new System.Drawing.Point(32, 112);
             this.dgvDopusteniUredaji.Name = "dgvDopusteniUredaji";
             this.dgvDopusteniUredaji.ReadOnly = true;
-            this.dgvDopusteniUredaji.Size = new System.Drawing.Size(527, 206);
+            this.dgvDopusteniUredaji.Size = new System.Drawing.Size(472, 206);
             this.dgvDopusteniUredaji.TabIndex = 0;
             // 
             // dopusteniuredajiBindingSource
@@ -84,7 +84,7 @@
             // 
             // btnDodajNoviUredaj
             // 
-            this.btnDodajNoviUredaj.Location = new System.Drawing.Point(74, 336);
+            this.btnDodajNoviUredaj.Location = new System.Drawing.Point(64, 336);
             this.btnDodajNoviUredaj.Name = "btnDodajNoviUredaj";
             this.btnDodajNoviUredaj.Size = new System.Drawing.Size(102, 29);
             this.btnDodajNoviUredaj.TabIndex = 1;
@@ -94,7 +94,7 @@
             // 
             // btnBrisanje
             // 
-            this.btnBrisanje.Location = new System.Drawing.Point(247, 336);
+            this.btnBrisanje.Location = new System.Drawing.Point(220, 336);
             this.btnBrisanje.Name = "btnBrisanje";
             this.btnBrisanje.Size = new System.Drawing.Size(102, 29);
             this.btnBrisanje.TabIndex = 3;
@@ -119,7 +119,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.Highlight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(116, 28);
+            this.label1.Location = new System.Drawing.Point(124, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(273, 24);
             this.label1.TabIndex = 8;
@@ -130,13 +130,13 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Highlight;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(547, 49);
+            this.pictureBox1.Size = new System.Drawing.Size(526, 49);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // btnAzuriraj
             // 
-            this.btnAzuriraj.Location = new System.Drawing.Point(418, 336);
+            this.btnAzuriraj.Location = new System.Drawing.Point(369, 338);
             this.btnAzuriraj.Name = "btnAzuriraj";
             this.btnAzuriraj.Size = new System.Drawing.Size(102, 29);
             this.btnAzuriraj.TabIndex = 10;
@@ -146,7 +146,7 @@
             // 
             // txtPretrazivanje
             // 
-            this.txtPretrazivanje.Location = new System.Drawing.Point(418, 77);
+            this.txtPretrazivanje.Location = new System.Drawing.Point(363, 77);
             this.txtPretrazivanje.Name = "txtPretrazivanje";
             this.txtPretrazivanje.Size = new System.Drawing.Size(141, 20);
             this.txtPretrazivanje.TabIndex = 12;
@@ -155,7 +155,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(275, 80);
+            this.label2.Location = new System.Drawing.Point(220, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 13);
             this.label2.TabIndex = 13;
@@ -194,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(571, 379);
+            this.ClientSize = new System.Drawing.Size(554, 379);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPretrazivanje);
             this.Controls.Add(this.btnAzuriraj);
@@ -206,7 +206,7 @@
             this.Controls.Add(this.dgvDopusteniUredaji);
             this.Name = "frmUpravljanjeUredajimaVoditelj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmUpravljanjeUredajima";
+            this.Text = "Upravljanje uređajima";
             this.Load += new System.EventHandler(this.frmUpravljanjeUredajima_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDopusteniUredaji)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dopusteniuredajiBindingSource)).EndInit();

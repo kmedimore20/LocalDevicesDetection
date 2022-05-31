@@ -81,7 +81,7 @@
             this.Controls.Add(this.lblID);
             this.Name = "frmBrisanjeUredaja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmBrisanjeUredaja";
+            this.Text = "Brisanje uređaja";
             this.ResumeLayout(false);
             this.PerformLayout();
 

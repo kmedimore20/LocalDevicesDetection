@@ -120,7 +120,7 @@
             this.Controls.Add(this.btnPozadina);
             this.Name = "frmIzbornik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmIzbornik";
+            this.Text = "Izbornik";
             this.ResumeLayout(false);
 
         }

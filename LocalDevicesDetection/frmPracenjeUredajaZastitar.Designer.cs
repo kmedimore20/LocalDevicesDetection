@@ -88,7 +88,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmPracenjeUredajaZastitar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPracenjeUredaja";
+            this.Text = "Praćenje uređaja";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

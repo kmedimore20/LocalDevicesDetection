@@ -161,7 +161,7 @@
             this.Controls.Add(this.txtIDstarog);
             this.Name = "frmAzuriranje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAzuriranje";
+            this.Text = "Ažuriranje";
             this.ResumeLayout(false);
             this.PerformLayout();
 

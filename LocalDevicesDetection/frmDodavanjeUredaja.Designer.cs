@@ -141,7 +141,7 @@
             this.Controls.Add(this.txtIDuredaja);
             this.Name = "frmDodavanjeUredaja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDodavanjeUredaja";
+            this.Text = "Dodavanje uređaja";
             this.ResumeLayout(false);
             this.PerformLayout();
 
