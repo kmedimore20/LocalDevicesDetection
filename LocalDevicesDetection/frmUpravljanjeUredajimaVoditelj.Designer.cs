@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpravljanjeUredajimaVoditelj));
             this.dgvDopusteniUredaji = new System.Windows.Forms.DataGridView();
-            this.iDuredajaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prezimevlasnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imevlasnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ulogaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dopusteniuredajiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kmedimore20_DBDataSet = new LocalDevicesDetection.kmedimore20_DBDataSet();
             this.dopusteni_uredajiTableAdapter = new LocalDevicesDetection.kmedimore20_DBDataSetTableAdapters.Dopusteni_uredajiTableAdapter();
@@ -46,6 +42,10 @@
             this.btnAzuriraj = new System.Windows.Forms.Button();
             this.txtPretrazivanje = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.iDuredajaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prezimevlasnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imevlasnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ulogaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDopusteniUredaji)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dopusteniuredajiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kmedimore20_DBDataSet)).BeginInit();
@@ -65,36 +65,8 @@
             this.dgvDopusteniUredaji.Location = new System.Drawing.Point(32, 112);
             this.dgvDopusteniUredaji.Name = "dgvDopusteniUredaji";
             this.dgvDopusteniUredaji.ReadOnly = true;
-            this.dgvDopusteniUredaji.Size = new System.Drawing.Size(448, 206);
+            this.dgvDopusteniUredaji.Size = new System.Drawing.Size(527, 206);
             this.dgvDopusteniUredaji.TabIndex = 0;
-            // 
-            // iDuredajaDataGridViewTextBoxColumn
-            // 
-            this.iDuredajaDataGridViewTextBoxColumn.DataPropertyName = "ID_uredaja";
-            this.iDuredajaDataGridViewTextBoxColumn.HeaderText = "ID_uredaja";
-            this.iDuredajaDataGridViewTextBoxColumn.Name = "iDuredajaDataGridViewTextBoxColumn";
-            this.iDuredajaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // prezimevlasnikaDataGridViewTextBoxColumn
-            // 
-            this.prezimevlasnikaDataGridViewTextBoxColumn.DataPropertyName = "Prezime_vlasnika";
-            this.prezimevlasnikaDataGridViewTextBoxColumn.HeaderText = "Prezime_vlasnika";
-            this.prezimevlasnikaDataGridViewTextBoxColumn.Name = "prezimevlasnikaDataGridViewTextBoxColumn";
-            this.prezimevlasnikaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // imevlasnikaDataGridViewTextBoxColumn
-            // 
-            this.imevlasnikaDataGridViewTextBoxColumn.DataPropertyName = "Ime_vlasnika";
-            this.imevlasnikaDataGridViewTextBoxColumn.HeaderText = "Ime_vlasnika";
-            this.imevlasnikaDataGridViewTextBoxColumn.Name = "imevlasnikaDataGridViewTextBoxColumn";
-            this.imevlasnikaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ulogaDataGridViewTextBoxColumn
-            // 
-            this.ulogaDataGridViewTextBoxColumn.DataPropertyName = "Uloga";
-            this.ulogaDataGridViewTextBoxColumn.HeaderText = "Uloga";
-            this.ulogaDataGridViewTextBoxColumn.Name = "ulogaDataGridViewTextBoxColumn";
-            this.ulogaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dopusteniuredajiBindingSource
             // 
@@ -122,7 +94,7 @@
             // 
             // btnBrisanje
             // 
-            this.btnBrisanje.Location = new System.Drawing.Point(203, 336);
+            this.btnBrisanje.Location = new System.Drawing.Point(247, 336);
             this.btnBrisanje.Name = "btnBrisanje";
             this.btnBrisanje.Size = new System.Drawing.Size(102, 29);
             this.btnBrisanje.TabIndex = 3;
@@ -149,22 +121,22 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(116, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 24);
+            this.label1.Size = new System.Drawing.Size(273, 24);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Upravljanje poznatm uređajima";
+            this.label1.Text = "Upravljanje poznatim uređajima";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Highlight;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(492, 49);
+            this.pictureBox1.Size = new System.Drawing.Size(547, 49);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // btnAzuriraj
             // 
-            this.btnAzuriraj.Location = new System.Drawing.Point(332, 336);
+            this.btnAzuriraj.Location = new System.Drawing.Point(418, 336);
             this.btnAzuriraj.Name = "btnAzuriraj";
             this.btnAzuriraj.Size = new System.Drawing.Size(102, 29);
             this.btnAzuriraj.TabIndex = 10;
@@ -174,7 +146,7 @@
             // 
             // txtPretrazivanje
             // 
-            this.txtPretrazivanje.Location = new System.Drawing.Point(339, 77);
+            this.txtPretrazivanje.Location = new System.Drawing.Point(418, 77);
             this.txtPretrazivanje.Name = "txtPretrazivanje";
             this.txtPretrazivanje.Size = new System.Drawing.Size(141, 20);
             this.txtPretrazivanje.TabIndex = 12;
@@ -183,17 +155,46 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(196, 80);
+            this.label2.Location = new System.Drawing.Point(275, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "Pretraživanje po prezimenu:";
             // 
+            // iDuredajaDataGridViewTextBoxColumn
+            // 
+            this.iDuredajaDataGridViewTextBoxColumn.DataPropertyName = "ID_uredaja";
+            this.iDuredajaDataGridViewTextBoxColumn.HeaderText = "ID uređaja";
+            this.iDuredajaDataGridViewTextBoxColumn.Name = "iDuredajaDataGridViewTextBoxColumn";
+            this.iDuredajaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // prezimevlasnikaDataGridViewTextBoxColumn
+            // 
+            this.prezimevlasnikaDataGridViewTextBoxColumn.DataPropertyName = "Prezime_vlasnika";
+            this.prezimevlasnikaDataGridViewTextBoxColumn.HeaderText = "Prezime vlasnika";
+            this.prezimevlasnikaDataGridViewTextBoxColumn.Name = "prezimevlasnikaDataGridViewTextBoxColumn";
+            this.prezimevlasnikaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.prezimevlasnikaDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // imevlasnikaDataGridViewTextBoxColumn
+            // 
+            this.imevlasnikaDataGridViewTextBoxColumn.DataPropertyName = "Ime_vlasnika";
+            this.imevlasnikaDataGridViewTextBoxColumn.HeaderText = "Ime vlasnika";
+            this.imevlasnikaDataGridViewTextBoxColumn.Name = "imevlasnikaDataGridViewTextBoxColumn";
+            this.imevlasnikaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ulogaDataGridViewTextBoxColumn
+            // 
+            this.ulogaDataGridViewTextBoxColumn.DataPropertyName = "Uloga";
+            this.ulogaDataGridViewTextBoxColumn.HeaderText = "Radno mjesto";
+            this.ulogaDataGridViewTextBoxColumn.Name = "ulogaDataGridViewTextBoxColumn";
+            this.ulogaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // frmUpravljanjeUredajimaVoditelj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 379);
+            this.ClientSize = new System.Drawing.Size(571, 379);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPretrazivanje);
             this.Controls.Add(this.btnAzuriraj);
@@ -222,10 +223,6 @@
         private kmedimore20_DBDataSet kmedimore20_DBDataSet;
         private System.Windows.Forms.BindingSource dopusteniuredajiBindingSource;
         private kmedimore20_DBDataSetTableAdapters.Dopusteni_uredajiTableAdapter dopusteni_uredajiTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDuredajaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prezimevlasnikaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imevlasnikaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ulogaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnDodajNoviUredaj;
         private System.Windows.Forms.Button btnBrisanje;
         private System.Windows.Forms.Button btnIzbornik;
@@ -234,5 +231,9 @@
         private System.Windows.Forms.Button btnAzuriraj;
         private System.Windows.Forms.TextBox txtPretrazivanje;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDuredajaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prezimevlasnikaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imevlasnikaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ulogaDataGridViewTextBoxColumn;
     }
 }
