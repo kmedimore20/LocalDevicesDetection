@@ -24,18 +24,12 @@ namespace LocalDevicesDetection
         {
             // TODO: This line of code loads data into the 'kmedimore20_DBDataSet.Dopusteni_uredaji' table. You can move, or remove it, as needed.
             this.dopusteni_uredajiTableAdapter.Fill(this.kmedimore20_DBDataSet.Dopusteni_uredaji);
-
+            dgvDopusteniUredaji.DataSource = this.kmedimore20_DBDataSet.Dopusteni_uredaji;
         }
 
         private void PrikazUredaja()
         {
-            var uredaji = PoznatiUredajiRepository.GetUredaj();
-            dgvDopusteniUredaji.DataSource = uredaji;
-
-            dgvDopusteniUredaji.Columns["ID_uredaja"].DisplayIndex = 0;
-            dgvDopusteniUredaji.Columns["Prezime"].DisplayIndex = 1;
-            dgvDopusteniUredaji.Columns["Ime"].DisplayIndex = 2;
-            dgvDopusteniUredaji.Columns["Uloga"].DisplayIndex = 3;
+            
         }
 
         private void btnDodajNoviUredaj_Click(object sender, EventArgs e)
@@ -78,6 +72,11 @@ namespace LocalDevicesDetection
         {
             Hide();
             Close();
+        }
+
+        private void txtPretrazivanje_TextChanged(object sender, EventArgs e)
+        {
+            (dgvDopusteniUredaji.DataSource as DataTable).DefaultView.RowFilter = string.Format("Prezime_vlasnika LIKE '%{0}%'", txtPretrazivanje.Text);
         }
     }
 }

@@ -44,6 +44,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAzuriraj = new System.Windows.Forms.Button();
+            this.txtPretrazivanje = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDopusteniUredaji)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dopusteniuredajiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kmedimore20_DBDataSet)).BeginInit();
@@ -60,7 +62,7 @@
             this.imevlasnikaDataGridViewTextBoxColumn,
             this.ulogaDataGridViewTextBoxColumn});
             this.dgvDopusteniUredaji.DataSource = this.dopusteniuredajiBindingSource;
-            this.dgvDopusteniUredaji.Location = new System.Drawing.Point(32, 67);
+            this.dgvDopusteniUredaji.Location = new System.Drawing.Point(32, 112);
             this.dgvDopusteniUredaji.Name = "dgvDopusteniUredaji";
             this.dgvDopusteniUredaji.ReadOnly = true;
             this.dgvDopusteniUredaji.Size = new System.Drawing.Size(448, 206);
@@ -110,7 +112,7 @@
             // 
             // btnDodajNoviUredaj
             // 
-            this.btnDodajNoviUredaj.Location = new System.Drawing.Point(78, 288);
+            this.btnDodajNoviUredaj.Location = new System.Drawing.Point(74, 336);
             this.btnDodajNoviUredaj.Name = "btnDodajNoviUredaj";
             this.btnDodajNoviUredaj.Size = new System.Drawing.Size(102, 29);
             this.btnDodajNoviUredaj.TabIndex = 1;
@@ -120,7 +122,7 @@
             // 
             // btnBrisanje
             // 
-            this.btnBrisanje.Location = new System.Drawing.Point(207, 288);
+            this.btnBrisanje.Location = new System.Drawing.Point(203, 336);
             this.btnBrisanje.Name = "btnBrisanje";
             this.btnBrisanje.Size = new System.Drawing.Size(102, 29);
             this.btnBrisanje.TabIndex = 3;
@@ -145,7 +147,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.Highlight;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(145, 28);
+            this.label1.Location = new System.Drawing.Point(116, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(269, 24);
             this.label1.TabIndex = 8;
@@ -162,7 +164,7 @@
             // 
             // btnAzuriraj
             // 
-            this.btnAzuriraj.Location = new System.Drawing.Point(336, 288);
+            this.btnAzuriraj.Location = new System.Drawing.Point(332, 336);
             this.btnAzuriraj.Name = "btnAzuriraj";
             this.btnAzuriraj.Size = new System.Drawing.Size(102, 29);
             this.btnAzuriraj.TabIndex = 10;
@@ -170,11 +172,30 @@
             this.btnAzuriraj.UseVisualStyleBackColor = true;
             this.btnAzuriraj.Click += new System.EventHandler(this.btnAzuriraj_Click);
             // 
+            // txtPretrazivanje
+            // 
+            this.txtPretrazivanje.Location = new System.Drawing.Point(339, 77);
+            this.txtPretrazivanje.Name = "txtPretrazivanje";
+            this.txtPretrazivanje.Size = new System.Drawing.Size(141, 20);
+            this.txtPretrazivanje.TabIndex = 12;
+            this.txtPretrazivanje.TextChanged += new System.EventHandler(this.txtPretrazivanje_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(262, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Pretraživanje:";
+            // 
             // frmUpravljanjeUredajimaVoditelj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 336);
+            this.ClientSize = new System.Drawing.Size(519, 379);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtPretrazivanje);
             this.Controls.Add(this.btnAzuriraj);
             this.Controls.Add(this.btnIzbornik);
             this.Controls.Add(this.label1);
@@ -211,5 +232,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAzuriraj;
+        private System.Windows.Forms.TextBox txtPretrazivanje;
+        private System.Windows.Forms.Label label2;
     }
 }
