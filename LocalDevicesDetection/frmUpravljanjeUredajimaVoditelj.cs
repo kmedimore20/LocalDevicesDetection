@@ -18,7 +18,6 @@ namespace LocalDevicesDetection
         public frmUpravljanjeUredajimaVoditelj()
         {
             InitializeComponent();
-            DB.SetConfiguration("kmedimore20_DB", "kmedimore20", "?Su/?Di@");
         }
 
         private void frmUpravljanjeUredajima_Load(object sender, EventArgs e)
@@ -47,7 +46,20 @@ namespace LocalDevicesDetection
             Close();
         }
 
-        private void btnPovratak_Click(object sender, EventArgs e)
+        private void btnBrisanje_Click(object sender, EventArgs e)
+        {
+            frmBrisanjeUredaja frmBrisanjeUredaja = new frmBrisanjeUredaja();
+            frmBrisanjeUredaja.FormClosing += new FormClosingEventHandler(this.frmBrisanjeUredaja_FormClosing);
+            frmBrisanjeUredaja.ShowDialog();
+        }
+
+        private void frmBrisanjeUredaja_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Hide();
+            Close();
+        }
+
+        private void btnIzbornik_Click(object sender, EventArgs e)
         {
             frmIzbornik frmizbornik = new frmIzbornik();
             Hide();
@@ -55,23 +67,17 @@ namespace LocalDevicesDetection
             Close();
         }
 
-        private void btnBrisanje_Click(object sender, EventArgs e)
+        private void btnAzuriraj_Click(object sender, EventArgs e)
         {
-            PoznatiUredaji odabrani = dgvDopusteniUredaji.CurrentRow.DataBoundItem as PoznatiUredaji;
-            if (odabrani != null)
-            {
-                string sql = $"DELETE FROM Dopusteni_uredaji WHERE ID_uredaja = '{odabrani.ID.ToString()}'";
-                DB.OpenConnection();
-                DB.ExecuteCommand(sql);
-                DB.CloseConnection();
+            frmAzuriranje frmAzuriranje= new frmAzuriranje();
+            frmAzuriranje.FormClosing += new FormClosingEventHandler(this.frmAzuriranje_FormClosing);
+            frmAzuriranje.ShowDialog();
+        }
 
-                MessageBox.Show("Uređaj je uspješno obrisan");
-
-                frmDodavanjeUredaja frmDodavanjeUredaja = new frmDodavanjeUredaja();
-                Hide();
-                frmDodavanjeUredaja.ShowDialog();
-                Close();
-            }
+        private void frmAzuriranje_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Hide();
+            Close();
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBLayer;
 
 namespace LocalDevicesDetection
 {
@@ -16,7 +17,8 @@ namespace LocalDevicesDetection
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmIzbornik());
+            DB.SetConfiguration("kmedimore20_DB", "kmedimore20", "?Su/?Di@");
+            Application.Run(new frmLogin());
         }
     }
 }

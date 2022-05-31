@@ -48,13 +48,5 @@ namespace LocalDevicesDetection.Repositories
             return uredaj;
         }
 
-        public static void DodajUredaj(PoznatiUredaji id, PoznatiUredaji prezime, PoznatiUredaji ime, PoznatiUredaji radnoMjesto)
-        {
-            string sql = $"INSERT into Dopusteni_uredaji (ID_uredaja, Prezime_vlasnika, Ime_vlasnika, Uloga) VALUES ({id.ID}, {prezime.Prezime}, {ime.Ime}, {radnoMjesto.Uloga})";
-            DB.OpenConnection();
-            DB.ExecuteCommand(sql);
-            DB.CloseConnection();
-        }
-
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpravljanjeUredajimaVoditelj));
             this.dgvDopusteniUredaji = new System.Windows.Forms.DataGridView();
             this.iDuredajaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimevlasnikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,11 +39,15 @@
             this.kmedimore20_DBDataSet = new LocalDevicesDetection.kmedimore20_DBDataSet();
             this.dopusteni_uredajiTableAdapter = new LocalDevicesDetection.kmedimore20_DBDataSetTableAdapters.Dopusteni_uredajiTableAdapter();
             this.btnDodajNoviUredaj = new System.Windows.Forms.Button();
-            this.btnPovratak = new System.Windows.Forms.Button();
             this.btnBrisanje = new System.Windows.Forms.Button();
+            this.btnIzbornik = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAzuriraj = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDopusteniUredaji)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dopusteniuredajiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kmedimore20_DBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvDopusteniUredaji
@@ -55,8 +60,9 @@
             this.imevlasnikaDataGridViewTextBoxColumn,
             this.ulogaDataGridViewTextBoxColumn});
             this.dgvDopusteniUredaji.DataSource = this.dopusteniuredajiBindingSource;
-            this.dgvDopusteniUredaji.Location = new System.Drawing.Point(76, 46);
+            this.dgvDopusteniUredaji.Location = new System.Drawing.Point(32, 67);
             this.dgvDopusteniUredaji.Name = "dgvDopusteniUredaji";
+            this.dgvDopusteniUredaji.ReadOnly = true;
             this.dgvDopusteniUredaji.Size = new System.Drawing.Size(448, 206);
             this.dgvDopusteniUredaji.TabIndex = 0;
             // 
@@ -65,24 +71,28 @@
             this.iDuredajaDataGridViewTextBoxColumn.DataPropertyName = "ID_uredaja";
             this.iDuredajaDataGridViewTextBoxColumn.HeaderText = "ID_uredaja";
             this.iDuredajaDataGridViewTextBoxColumn.Name = "iDuredajaDataGridViewTextBoxColumn";
+            this.iDuredajaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // prezimevlasnikaDataGridViewTextBoxColumn
             // 
             this.prezimevlasnikaDataGridViewTextBoxColumn.DataPropertyName = "Prezime_vlasnika";
             this.prezimevlasnikaDataGridViewTextBoxColumn.HeaderText = "Prezime_vlasnika";
             this.prezimevlasnikaDataGridViewTextBoxColumn.Name = "prezimevlasnikaDataGridViewTextBoxColumn";
+            this.prezimevlasnikaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // imevlasnikaDataGridViewTextBoxColumn
             // 
             this.imevlasnikaDataGridViewTextBoxColumn.DataPropertyName = "Ime_vlasnika";
             this.imevlasnikaDataGridViewTextBoxColumn.HeaderText = "Ime_vlasnika";
             this.imevlasnikaDataGridViewTextBoxColumn.Name = "imevlasnikaDataGridViewTextBoxColumn";
+            this.imevlasnikaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ulogaDataGridViewTextBoxColumn
             // 
             this.ulogaDataGridViewTextBoxColumn.DataPropertyName = "Uloga";
             this.ulogaDataGridViewTextBoxColumn.HeaderText = "Uloga";
             this.ulogaDataGridViewTextBoxColumn.Name = "ulogaDataGridViewTextBoxColumn";
+            this.ulogaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dopusteniuredajiBindingSource
             // 
@@ -100,7 +110,7 @@
             // 
             // btnDodajNoviUredaj
             // 
-            this.btnDodajNoviUredaj.Location = new System.Drawing.Point(422, 288);
+            this.btnDodajNoviUredaj.Location = new System.Drawing.Point(78, 288);
             this.btnDodajNoviUredaj.Name = "btnDodajNoviUredaj";
             this.btnDodajNoviUredaj.Size = new System.Drawing.Size(102, 29);
             this.btnDodajNoviUredaj.TabIndex = 1;
@@ -108,19 +118,9 @@
             this.btnDodajNoviUredaj.UseVisualStyleBackColor = true;
             this.btnDodajNoviUredaj.Click += new System.EventHandler(this.btnDodajNoviUredaj_Click);
             // 
-            // btnPovratak
-            // 
-            this.btnPovratak.Location = new System.Drawing.Point(76, 288);
-            this.btnPovratak.Name = "btnPovratak";
-            this.btnPovratak.Size = new System.Drawing.Size(112, 29);
-            this.btnPovratak.TabIndex = 2;
-            this.btnPovratak.Text = "Povratak na izbornik";
-            this.btnPovratak.UseVisualStyleBackColor = true;
-            this.btnPovratak.Click += new System.EventHandler(this.btnPovratak_Click);
-            // 
             // btnBrisanje
             // 
-            this.btnBrisanje.Location = new System.Drawing.Point(422, 323);
+            this.btnBrisanje.Location = new System.Drawing.Point(207, 288);
             this.btnBrisanje.Name = "btnBrisanje";
             this.btnBrisanje.Size = new System.Drawing.Size(102, 29);
             this.btnBrisanje.TabIndex = 3;
@@ -128,13 +128,58 @@
             this.btnBrisanje.UseVisualStyleBackColor = true;
             this.btnBrisanje.Click += new System.EventHandler(this.btnBrisanje_Click);
             // 
+            // btnIzbornik
+            // 
+            this.btnIzbornik.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnIzbornik.Image = ((System.Drawing.Image)(resources.GetObject("btnIzbornik.Image")));
+            this.btnIzbornik.Location = new System.Drawing.Point(21, 18);
+            this.btnIzbornik.Name = "btnIzbornik";
+            this.btnIzbornik.Size = new System.Drawing.Size(37, 34);
+            this.btnIzbornik.TabIndex = 9;
+            this.btnIzbornik.UseVisualStyleBackColor = false;
+            this.btnIzbornik.Click += new System.EventHandler(this.btnIzbornik_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(145, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(269, 24);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Upravljanje poznatm uređajima";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(492, 49);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAzuriraj
+            // 
+            this.btnAzuriraj.Location = new System.Drawing.Point(336, 288);
+            this.btnAzuriraj.Name = "btnAzuriraj";
+            this.btnAzuriraj.Size = new System.Drawing.Size(102, 29);
+            this.btnAzuriraj.TabIndex = 10;
+            this.btnAzuriraj.Text = "Ažuriraj podatke";
+            this.btnAzuriraj.UseVisualStyleBackColor = true;
+            this.btnAzuriraj.Click += new System.EventHandler(this.btnAzuriraj_Click);
+            // 
             // frmUpravljanjeUredajimaVoditelj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 418);
+            this.ClientSize = new System.Drawing.Size(519, 336);
+            this.Controls.Add(this.btnAzuriraj);
+            this.Controls.Add(this.btnIzbornik);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBrisanje);
-            this.Controls.Add(this.btnPovratak);
             this.Controls.Add(this.btnDodajNoviUredaj);
             this.Controls.Add(this.dgvDopusteniUredaji);
             this.Name = "frmUpravljanjeUredajimaVoditelj";
@@ -144,7 +189,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDopusteniUredaji)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dopusteniuredajiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kmedimore20_DBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -159,7 +206,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn imevlasnikaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ulogaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnDodajNoviUredaj;
-        private System.Windows.Forms.Button btnPovratak;
         private System.Windows.Forms.Button btnBrisanje;
+        private System.Windows.Forms.Button btnIzbornik;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAzuriraj;
     }
 }

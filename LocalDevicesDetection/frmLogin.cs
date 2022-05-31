@@ -19,7 +19,7 @@ namespace LocalDevicesDetection
 
         string usernameVoditelj = "Voditelj";
         string passwordVoditelj = "voditelj";
-        string usernameZastitar = "Zaštitar";
+        string usernameZastitar = "Zastitar";
         string passwordZastitar = "zastitar";
 
         private void btnPrijava_Click(object sender, EventArgs e)
